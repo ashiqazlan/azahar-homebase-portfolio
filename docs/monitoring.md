@@ -6,10 +6,12 @@ Azahar HomeBase uses a self-hosted monitoring stack deployed through Docker Comp
 
 The stack consists of:
 
-- Prometheus — metrics collection and time-series storage.
-- Node Exporter — Linux host metrics.
-- Grafana OSS — dashboards and visualisation.
+- Prometheus 3.16.0 — metrics collection and time-series storage.
+- Node Exporter 1.12.1 — Linux host metrics.
+- Grafana OSS 13.0.2 — dashboards and visualisation.
 
+Container images are pinned to these versions in
+`monitoring/docker-compose.yml` to improve deployment reproducibility.
 The monitoring stack operates independently of the HomeBase application.
 
 ## 2. Architecture

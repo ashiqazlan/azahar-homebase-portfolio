@@ -1,6 +1,6 @@
 services:
   grafana:
-    image: grafana/grafana-oss:latest
+    image: grafana/grafana-oss:13.0.2
     container_name: azahar-grafana
     restart: unless-stopped
     ports:
@@ -11,7 +11,7 @@ services:
     depends_on:
       - prometheus
   prometheus:
-    image: prom/prometheus:latest
+    image: prom/prometheus:v3.16.0
     container_name: azahar-prometheus
     restart: unless-stopped
     volumes:
@@ -24,7 +24,7 @@ services:
       - "9090"
 
   node-exporter:
-    image: prom/node-exporter:latest
+    image: prom/node-exporter:v1.12.1
     container_name: azahar-node-exporter
     restart: unless-stopped
     pid: host
